@@ -1,0 +1,30 @@
+﻿<Window x:Class="StockCalculator.EditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StockCalculator"
+        mc:Ignorable="d"
+		WindowStyle="None"
+        Title="Edit value window" Height="150" Width="265" ResizeMode="NoResize" Background="#FF25262B" WindowStartupLocation="CenterOwner">
+	<Border BorderThickness="1" BorderBrush="#268CB6E4">
+    <Grid Margin="20">
+		<Grid.RowDefinitions>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
+		<TextBlock Text="New value" x:Name="title_txt" Grid.Row="0" FontSize="14" Margin="5" FontFamily="Segoe UI" VerticalAlignment="Bottom" HorizontalAlignment="Left" Foreground="White" TextOptions.TextFormattingMode="Display" ></TextBlock>
+		<TextBox x:Name="edit_textBox" Text="0.00" FontSize="18" Grid.Row="1" Margin="5" MaxLines="1" MaxLength="20" TextOptions.TextFormattingMode="Display" BorderThickness="0"></TextBox>
+		<!-- buttons -->
+		<Grid Grid.Row="2">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+			</Grid.ColumnDefinitions>
+			<Button x:Name="cancel_button" Click="cancel_action" Grid.Column="0" Margin="5" Content="Cancel" FontFamily="Segoe UI" FontSize="14" Cursor="Hand" BorderThickness="0" Background="#FF97A8BB"></Button>
+			<Button x:Name="apply_button" Click="apply_action" Grid.Column="1" Margin="5" Content="Apply" FontFamily="Segoe UI" FontSize="14" Cursor="Hand" BorderThickness="0" Background="#FF5D92CD"></Button>
+		</Grid>
+	</Grid>
+	</Border>
+</Window>
